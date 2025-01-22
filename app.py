@@ -1,16 +1,14 @@
 import gradio as gr
+import spaces
+import torch
 
-# Define a simple function for demonstration
-def greet(name):
-    return f"Hello, {name}!"
+zero = torch.Tensor([0]).cuda()
+print(zero.device) # <-- 'cpu' 🤔
 
-# Create a Gradio interface
-demo = gr.Interface(
-    fn=greet,
-    inputs=gr.Textbox(label="Your Name"),
-    outputs=gr.Textbox(label="Greeting")
-)
+@spaces.GPU
+def greet(n):
+    print(zero.device) # <-- 'cuda:0' 🤗
+    return f"Hello {zero + n} Tensor"
 
-# Launch the app
-if __name__ == "__main__":
-    demo.launch()
+demo = gr.Interface(fn=greet, inputs=gr.Number(), outputs=gr.Text())
+demo.launch()
