@@ -1,14 +1,14 @@
 ---
 title: 🔄 Generator-Evaluator Workflow 🔄
 emoji: 🧠
-colorFrom: orange
-colorTo: pink
+colorFrom: red
+colorTo: orange
 sdk: gradio
 sdk_version: 5.12.0
 app_file: app.py
 pinned: false
 license: mit
-short_description: Demo of iterative refinement using the generator-evaluator workflow.
+short_description: Demo of the generator-evaluator workflow.
 ---
 
 # 🔄 Generator-Evaluator Workflow 🔄
