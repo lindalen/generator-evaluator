@@ -2,7 +2,7 @@
 title: 🔄 Generator-Evaluator Workflow 🔄
 emoji: 🧠
 colorFrom: red
-colorTo: orange
+colorTo: yellow
 sdk: gradio
 sdk_version: 5.12.0
 app_file: app.py
