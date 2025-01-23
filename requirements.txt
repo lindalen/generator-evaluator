@@ -1,4 +1,13 @@
+# mamba install pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
+
+torch
 transformers
 sentencepiece
 accelerate
-torch
+
+# == local ==
+gradio
+spaces
+huggingface_hub
+datasets
+python-dotenv
