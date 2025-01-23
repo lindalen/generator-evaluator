@@ -94,7 +94,6 @@ default_criteria = (
 )
 
 # BACKEND
-# Streaming function
 def stream_generation(system_prompt, user_prompt, prev_draft=None, prev_feedback=None):
     """
     Streams a response from the model for a given system and user prompt.
@@ -127,7 +126,6 @@ def stream_generation(system_prompt, user_prompt, prev_draft=None, prev_feedback
 
             yield formatted_response_buffer
 
-# Streaming function
 def stream_evaluation(evaluation_criteria, generator_draft):
     """
     Streams a response from the model for a given system and user prompt.
@@ -155,6 +153,7 @@ def stream_evaluation(evaluation_criteria, generator_draft):
 
             yield formatted_response_buffer
 
+@spaces.GPU(duration=120)
 def auto_generate(role, task, criteria, max_retries):
     """
     1) Stream content from the generator first
