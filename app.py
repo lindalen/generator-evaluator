@@ -96,6 +96,17 @@ examples = {
           "7) Conclusion: Does it end with a brief, impactful statement?\n\n"
           "If any check fails, flag the exact sentence or section and provide a concise fix. If all checks pass, suggest minor improvements for better memorability and flow."
     )
+  },
+  "Nutshell Generator": {
+      "role": "You are a 'in-a-nutshell' explanation generator. You manage to explain topics with a perfect mix of conciseness and comprehensiveness.",
+      "task": "Explain why quantum mechanics are fundamental to everything.",
+      "criteria": (
+          "Evaluation Criteria:\n\n"
+          "1) Is the explanation absolutely true?"
+          "2) Does the explanation lack essential information?"
+          "3) Length: Could it be said in a shorter way?"
+          "4) Language: Is the language simple and jargon-free?"
+      )
   }
 }
 
