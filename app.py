@@ -9,6 +9,7 @@ from transformers import (
 )
 from threading import Thread
 import re
+from functools import partial
 
 # SETUP
 MODEL = "meta-llama/Llama-3.1-8B-Instruct"
