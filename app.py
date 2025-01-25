@@ -4,8 +4,7 @@ import gradio as gr
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
-    pipeline,
-    TextIteratorStreamer,
+    TextIteratorStreamer
 )
 from threading import Thread
 import re
@@ -65,9 +64,9 @@ def get_feedback_prompt(draft, feedback):
 evaluator_system_prompt = """
 You are an evaluator. Respond with two distinct sections, clearly marked by the headers **THINKING** and **FEEDBACK**.
 
-1. **THINKING**: Analyze the response based on the given criteria. Highlight key observations, strengths, and weaknesses. Keep this section focused on evaluation only—do not include suggestions.
+1. **THINKING**: Evaluate the text by each given criteria. Keep this section focused on evaluation only—do not include suggestions.
 
-2. **FEEDBACK**: Provide specific, actionable steps to improve the response. Focus on practical adjustments to better meet the criteria. Avoid repeating analysis here.
+2. **FEEDBACK**: Give specific improvements to meet the criteria. Use examples from the text. If no changes are needed, say so. Give orders, not suggestions. Be ruthless.
 
 Structure your response exactly as shown, using Markdown format:
 ### THINKING
